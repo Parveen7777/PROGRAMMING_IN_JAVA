@@ -1,0 +1,34 @@
+T01|Normal|TwoWheeler, 130 min|30.0|30.0|PASS
+T02|Normal|Car, 130 min|90.0|90.0|PASS
+T03|Normal|ElectricCar parking + 10 kWh|210.0|210.0|PASS
+T04|Normal|Ticket numbers are unique and increasing|true|true|PASS
+T05|Boundary|Zero-minute stay|0.0|0.0|PASS
+T06|Boundary|Exactly 60 min = 1 hour|30.0|30.0|PASS
+T07|Boundary|61 min = 2 hours|60.0|60.0|PASS
+T08|Boundary|480 min (8 h) = daily cap reached|240.0|240.0|PASS
+T09|Boundary|600 min capped at daily max|240.0|240.0|PASS
+T10|Boundary|1440 min = exactly one day|240.0|240.0|PASS
+T11|Boundary|1441 min = day + 1 started hour|270.0|270.0|PASS
+T12|Boundary|Integer-division trap avoided (130 min)|90.0|90.0|PASS
+T13|Boundary|Last free slot is allocated|[1, 0]|[1, 0]|PASS
+T14|Boundary|Entry when facility is full|IllegalStateException|IllegalStateException|PASS
+T15|Boundary|Freed slot is re-used|[0, 1]|[0, 1]|PASS
+T16|Rule|Student with monthly pass parks free|0.0|0.0|PASS
+T17|Rule|Visitor claiming monthly pass still pays|150.0|150.0|PASS
+T18|Rule|Pass holder still pays for EV charging|60.0|60.0|PASS
+T19|Rule|equals(): same regNo, different class|true|true|PASS
+T20|Rule|Slot is free again after exit|1|1|PASS
+T21|Invalid|Unknown vehicle type|IllegalArgumentException|IllegalArgumentException|PASS
+T22|Invalid|Duplicate registration number|IllegalStateException|IllegalStateException|PASS
+T23|Invalid|release(): floor out of range|false|false|PASS
+T24|Invalid|release(): slot out of range|false|false|PASS
+T25|Invalid|release(): slot already free|false|false|PASS
+T26|Invalid|Negative duration|IllegalArgumentException|IllegalArgumentException|PASS
+T27|Invalid|Exit before entry|IllegalArgumentException|IllegalArgumentException|PASS
+T28|Invalid|Exit for unknown registration|IllegalArgumentException|IllegalArgumentException|PASS
+T29|Invalid|Charging a non-EV|IllegalArgumentException|IllegalArgumentException|PASS
+T30|Invalid|Blank registration number|IllegalArgumentException|IllegalArgumentException|PASS
+SCENARIO|[0.0, 120.0, 150.0, 0.0, 0.0, 90.0, 60.0]|420.0
+T31|Scenario|Day's total collection (hand-calculated = 420)|420.0|420.0|PASS
+T32|Scenario|Facility empty at end of day|0|0|PASS
+SUMMARY|32|32
