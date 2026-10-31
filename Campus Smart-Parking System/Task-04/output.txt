@@ -1,0 +1,5 @@
+a.ticketNo=1001  b.ticketNo=1002  copy.ticketNo=1001
+tickets issued (static counter) = 2
+a == copy : false   same vehicle object : true
+after method call: car still = Car[TN02B2]   a.exit set by method = 2026-10-30T11:00
+copy.exit (separate object) = null
