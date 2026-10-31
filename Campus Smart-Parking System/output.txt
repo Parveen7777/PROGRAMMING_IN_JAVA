@@ -1,0 +1,8 @@
+1. minutes / 60 * rate            = 60.0
+2. (double)(minutes / 60) * rate  = 60.0
+3. minutes / 60.0 * rate          = 65.0
+4. Math.ceil(minutes / 60) * rate = 60.0
+5. (minutes + 59) / 60 * rate     = 90.0
+6. (int) 3_000_000_000L           = -1294967296
+   Math.toIntExact(3_000_000_000L) -> integer overflow
+7. Integer 127 == 127 : true   Integer 128 == 128 : false   128 equals 128 : true
