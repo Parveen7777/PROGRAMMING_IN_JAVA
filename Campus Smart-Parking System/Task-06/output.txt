@@ -1,0 +1,6 @@
+new ElectricCar("TN03C3") ->
+  (JVM allocates object, all fields = defaults; Object() runs first, silently)
+  3. Vehicle(regNo) body runs -> regNo = TN03C3
+  4. Car(regNo) body runs
+  5. ElectricCar(regNo) body runs
+  done: object fully built, reference returned to caller
