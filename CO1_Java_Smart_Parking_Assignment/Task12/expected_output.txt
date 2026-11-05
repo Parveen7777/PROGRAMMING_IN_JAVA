@@ -1,0 +1,5 @@
+TN10EB1234 parked at floor 1, slot 1
+TN20DV5678 parked at floor 1, slot 2
+E-bike flat fee: Rs 20.0
+Delivery van fee at 10 AM: Rs 60.0
+Visitor one-day pass fee: Rs 0.0
