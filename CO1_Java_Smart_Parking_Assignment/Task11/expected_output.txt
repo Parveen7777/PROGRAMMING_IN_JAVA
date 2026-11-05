@@ -1,8 +1,0 @@
-Bike ticket: 1, slot: 1
-Car ticket: 2, slot: 2
-Third vehicle allocated: false
-Bike fee for 61 minutes: Rs 20.0
-Car fee for 60 minutes: Rs 30.0
-Total collection: Rs 50.0
-Release slot 1: true
-Release slot 1 again: false
