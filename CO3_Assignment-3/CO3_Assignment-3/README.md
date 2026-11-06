@@ -1,6 +1,6 @@
 # CSA09-<RegisterNumber>-Assignment3 — Programming in Java (CO3)
 
-| | Student A |
+| | Student  |
 |---|---|
 | Name | PARVEEN | 
 | Register number | 192462005 |  
