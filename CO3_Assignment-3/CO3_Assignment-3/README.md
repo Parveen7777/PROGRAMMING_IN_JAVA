@@ -1,10 +1,9 @@
 # CSA09-<RegisterNumber>-Assignment3 — Programming in Java (CO3)
 
-| | Student A | Student B |
-|---|---|---|
-| Name | ______ | ______ |
-| Register number | ______ | ______ |
-| GitHub repo | ______ | ______ |
+| | Student A |
+|---|---|
+| Name | PARVEEN | 
+| Register number | 192462005 |  
 
 **Java version used:** OpenJDK 21 (any JDK 17+ works). Check with `java -version`.
 
