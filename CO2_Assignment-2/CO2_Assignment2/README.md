@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Name** | `<Your Name>` |
-| **Register Number** | `<Your Register Number>` |
+| **Name** | `PARVEEN` |
+| **Register Number** | `192462005` |
 | **Course** | Programming in Java (CSA09) – Assignment 2, CO2 |
 | **Java version** | OpenJDK 21 (any JDK 17+ works; `javac`/`java` must be on the PATH) |
 | **Faculty collaborator** | add the course faculty as collaborator (or keep this repository public) |
