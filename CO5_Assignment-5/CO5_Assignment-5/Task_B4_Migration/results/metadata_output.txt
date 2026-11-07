@@ -1,0 +1,21 @@
+Database product   : MariaDB 10.11.14-MariaDB-0ubuntu0.24.04.1
+Driver             : MariaDB Connector/J 2.7.6
+JDBC spec version  : 4.2
+Connected URL/user : jdbc:mysql://localhost:3306/transport_test / tester
+Supports transactions  : true
+Supports batch updates : true
+Max connections        : 0 (0 = no fixed limit reported)
+
+Tables in catalog 'transport_test':
+   bus_pass  (TABLE)
+   users  (TABLE)
+
+Columns of bus_pass:
+   pass_id    VARCHAR    size=20   nullable=NO
+   reg_no     VARCHAR    size=15   nullable=NO
+   name       VARCHAR    size=60   nullable=NO
+   route_no   INT        size=10   nullable=NO
+   amount     DECIMAL    size=10   nullable=NO
+
+Primary key of bus_pass:
+   pass_id (key seq 1)

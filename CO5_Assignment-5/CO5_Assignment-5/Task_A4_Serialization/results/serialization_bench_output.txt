@@ -1,0 +1,4 @@
+n          Serial size    Ser save ms  Ser load ms  CSV size       CSV save ms  CSV load ms 
+1000       37034          9.5          11.4         26670          6.9          3.5         
+10000      379034         26.9         38.7         276690         18.2         38.4        
+100000     3889034        121.7        158.8        2866890        52.1         172.6       

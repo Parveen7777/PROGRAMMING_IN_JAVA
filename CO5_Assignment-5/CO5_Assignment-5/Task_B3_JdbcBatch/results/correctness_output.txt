@@ -1,0 +1,24 @@
+Statement                                                  loaded=10  rows in table=10  identical to Statement result: true
+PreparedStatement                                          loaded=10  rows in table=10  identical to Statement result: true
+Prepared + addBatch (auto-commit)                          loaded=10  rows in table=10  identical to Statement result: true
+Prepared batch in one transaction (PassLoader.loadAll)     loaded=10  rows in table=10  identical to Statement result: true
+
+Table contents (last run):
+P0000001|192310001|Student 1|2|3100.00
+P0000002|192310002|Student 2|3|3200.00
+P0000003|192310003|Student 3|4|3300.00
+P0000004|192310004|Student 4|5|3400.00
+P0000005|192310005|Student 5|6|3500.00
+P0000006|192310006|Student 6|7|3600.00
+P0000007|192310007|Student 7|8|3700.00
+P0000008|192310008|Student 8|9|3800.00
+P0000009|192310009|Student 9|10|3900.00
+P0000010|192310010|Student 10|11|4000.00
+
+ResultSetMetaData of: SELECT * FROM bus_pass
+#    column     SQL type     size       scale      nullable
+1    pass_id    VARCHAR      20         0          NOT NULL
+2    reg_no     VARCHAR      15         0          NOT NULL
+3    name       VARCHAR      60         0          NOT NULL
+4    route_no   INTEGER      11         0          NOT NULL
+5    amount     DECIMAL      10         2          NOT NULL

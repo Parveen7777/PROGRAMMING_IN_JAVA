@@ -1,0 +1,9 @@
+File contents (8 lines): 2 valid, 6 damaged by design
+scanReport -> valid=2, damaged=6
+find(P2001) -> P2001|192311010|Asha|5|3900.0
+find(P2002) -> null (rejected/not found)
+find(P2003) -> null (rejected/not found)
+find(P2004) -> null (rejected/not found)
+find(P2005) -> null (rejected/not found)
+find(P2006) -> P2006|192311016|Farid|5|4100.0
+listByRoute(5) returns 2 valid passes (no exception thrown)

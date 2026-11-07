@@ -1,0 +1,4 @@
+1. Non-transient connection -> NotSerializableException: TransientDemo$FakeConnection
+2. Whole graph Hostel -> Room -> Resident written in 352 bytes (one writeObject call)
+3. After reading back: name=Arun, regNo=192311001, password=null, connection=null   (transient fields reset to null)
+4. Same Resident in two rooms is still ONE object after reload: true

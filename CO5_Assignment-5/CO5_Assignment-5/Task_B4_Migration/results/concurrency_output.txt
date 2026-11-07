@@ -1,0 +1,5 @@
+1. 4 counters x 2500 passes issued concurrently in 2316 ms; thread failures=0
+   expected rows = 10000, actual rows = 10000  -> NO LOST OR DUPLICATED ROWS
+2. Same pass id issued by 2 counters at once: succeeded=1, rejected by primary key=1
+3. Find one pass among 99200 rows: database primary-key lookup = 0.078 ms, text-file scan = 17.04 ms (218x slower)
+   passes on route 7 (indexed query): 3334 in 1.30 ms

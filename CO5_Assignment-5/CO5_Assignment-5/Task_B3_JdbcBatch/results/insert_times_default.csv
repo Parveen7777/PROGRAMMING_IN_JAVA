@@ -1,0 +1,19 @@
+strategy,n,time_ms,rows_per_second
+"a) Statement (auto-commit)",1000,272,3675
+"b) PreparedStatement (auto-commit)",1000,216,4634
+"c) Prepared + addBatch (auto-commit)",1000,288,3476
+"d) Prepared batch + 1 transaction (PassLoader)",1000,55,18088
+"e) multi-row INSERT (1 txn)",1000,24,42488
+"f) LOAD DATA LOCAL INFILE",1000,21,46818
+"a) Statement (auto-commit)",10000,1594,6275
+"b) PreparedStatement (auto-commit)",10000,1723,5805
+"c) Prepared + addBatch (auto-commit)",10000,1540,6494
+"d) Prepared batch + 1 transaction (PassLoader)",10000,305,32749
+"e) multi-row INSERT (1 txn)",10000,93,107413
+"f) LOAD DATA LOCAL INFILE",10000,96,104179
+"a) Statement (auto-commit)",100000,14416,6937
+"b) PreparedStatement (auto-commit)",100000,14382,6953
+"c) Prepared + addBatch (auto-commit)",100000,14241,7022
+"d) Prepared batch + 1 transaction (PassLoader)",100000,2228,44882
+"e) multi-row INSERT (1 txn)",100000,678,147512
+"f) LOAD DATA LOCAL INFILE",100000,449,222580

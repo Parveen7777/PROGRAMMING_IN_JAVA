@@ -1,0 +1,11 @@
+PASS T1 add then find existing pass                       [P1003, 192311003, Divya, 7, 3800.0]
+PASS T2 find non-existent pass id                         returned null
+PASS T3a damaged line is not returned                     returned null
+PASS T3b record AFTER damaged line still found            [P1004, 192311004, Meena, 12, 4000.0]
+PASS T4 list passes on route 12                           found 2
+PASS T5 list passes on route with none (99)               empty list
+PASS T6 name containing a comma round-trips               [P1005, 192311005, Kumar, Ravi, 3, 2500.0]
+PASS T7 scan report valid/damaged = 4/1                   valid=4 damaged=1
+PASS T8 missing file treated as empty store               no exception
+
+Summary: 9 passed, 0 failed

@@ -1,0 +1,7 @@
+SizeMB   Lines      Unbuf(ms)      Buf8K(ms)      Buf64K(ms)     ReadAllLines(ms) Heap(MB)  
+1        36158      691.9          7.3            3.5            47.6             2.3       
+   predicted read() calls: unbuffered = 1048582 (one per byte); buffered(8K) ~ 129
+10       361578     2985.9         4.7            4.4            85.5             25.8      
+   predicted read() calls: unbuffered = 10485762 (one per byte); buffered(8K) ~ 1281
+50       1807890    15290.7        25.9           27.3           538.3            131.1     
+   predicted read() calls: unbuffered = 52428810 (one per byte); buffered(8K) ~ 6401

@@ -1,0 +1,6 @@
+--- serialVersionUID experiment ---
+v1 wrote residents_v1.ser (fields: name, regNo; serialVersionUID = 1L)
+v2 (phone added, SAME serialVersionUID):
+read OK -> Resident[Arun, 192311001, phone=null]
+v3 (phone added, NO serialVersionUID declared):
+InvalidClassException -> Resident; local class incompatible: stream classdesc serialVersionUID = 1, local class serialVersionUID = -8528813912482234793

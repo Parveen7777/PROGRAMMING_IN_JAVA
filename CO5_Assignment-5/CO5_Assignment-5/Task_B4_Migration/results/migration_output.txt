@@ -1,0 +1,12 @@
+=== MIGRATION REPORT ===
+Lines read      : 100000
+Loaded rows     : 99000
+Rejected lines  : 1000
+Elapsed         : 3.49 s
+Rejected by reason:
+   amount is not a number             200
+   empty line                         200
+   route out of range 1-99            200
+   duplicate pass id in file          200
+   wrong number of fields (3)         200
+Details written to results/rejects_report.txt

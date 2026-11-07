@@ -1,0 +1,4 @@
+sizeMB,lines,unbuffered_ms,buffered8k_ms,buffered64k_ms,readAllLines_ms,readAllLines_heap_MB
+1,36158,691.9,7.3,3.5,47.6,2.3
+10,361578,2985.9,4.7,4.4,85.5,25.8
+50,1807890,15290.7,25.9,27.3,538.3,131.1

@@ -1,0 +1,32 @@
+Test table users holds: alice / admin (passwords known only to the table)
+
+[T1 valid credentials]  id=<alice>  pwd=<S3cret#2025>
+   SQL sent  : SELECT * FROM users WHERE id='alice' AND pwd='S3cret#2025'
+   UNSAFE version -> LOGIN ACCEPTED
+   SAFE   version -> LOGIN ACCEPTED
+
+[T2 wrong password]  id=<alice>  pwd=<guess123>
+   SQL sent  : SELECT * FROM users WHERE id='alice' AND pwd='guess123'
+   UNSAFE version -> login rejected
+   SAFE   version -> login rejected
+
+[T3 INJECTION: always-true OR]  id=<alice>  pwd=<x' OR '1'='1>
+   SQL sent  : SELECT * FROM users WHERE id='alice' AND pwd='x' OR '1'='1'
+   UNSAFE version -> LOGIN ACCEPTED
+   SAFE   version -> login rejected
+
+[T4 INJECTION: comment-out pwd]  id=<admin'-- >  pwd=<anything>
+   SQL sent  : SELECT * FROM users WHERE id='admin'-- ' AND pwd='anything'
+   UNSAFE version -> LOGIN ACCEPTED
+   SAFE   version -> login rejected
+
+[T5 INJECTION: no id, no pwd]  id=<' OR 1=1 -- >  pwd=<>
+   SQL sent  : SELECT * FROM users WHERE id='' OR 1=1 -- ' AND pwd=''
+   UNSAFE version -> LOGIN ACCEPTED
+   SAFE   version -> login rejected
+
+[T6 name with apostrophe (legit)]  id=<o'brien>  pwd=<pw>
+   SQL sent  : SELECT * FROM users WHERE id='o'brien' AND pwd='pw'
+   SQL error : (conn=5) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'brien' AND pwd='pw'' at line 1
+   UNSAFE version -> login rejected
+   SAFE   version -> login rejected

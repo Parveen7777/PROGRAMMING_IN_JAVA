@@ -1,0 +1,3 @@
+Regex validation CPU cost : 2.029 microseconds per input (ok=20000)
+Quote escaping CPU cost   : 1.176 microseconds per input (len=248890)
+20000 queries: validated+concatenated Statement = 703 ms, PreparedStatement (reused) = 565 ms

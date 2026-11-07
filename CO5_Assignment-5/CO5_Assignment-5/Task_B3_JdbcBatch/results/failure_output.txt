@@ -1,0 +1,11 @@
+[AUTO-COMMIT batches]   failed with: NumberFormatException - For input string: "12x.5"
+[AUTO-COMMIT batches]   rows left in table after failure = 5000   (half-loaded: DATA IS INCONSISTENT)
+[ONE TRANSACTION]       failed with: NumberFormatException - For input string: "12x.5"
+[ONE TRANSACTION]       rows left in table after failure = 0   (rolled back: ALL-OR-NOTHING)
+
+[AUTO-COMMIT batches]   duplicate key -> BatchUpdateException
+[AUTO-COMMIT batches]   rows left = 7999
+[ONE TRANSACTION]       duplicate key -> BatchUpdateException
+[ONE TRANSACTION]       rows left = 0
+
+[CONTROL] valid data via PassLoader.loadAll -> loaded=10000, rows in table=10000
