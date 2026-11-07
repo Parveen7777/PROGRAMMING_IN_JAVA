@@ -1,0 +1,14 @@
+digraph { rankdir=TB; graph [fontname="DejaVu Sans" dpi=170 pad=0.2 bgcolor=white]; node [fontname="DejaVu Sans" fontsize=15 shape=box style="rounded,filled" fillcolor="#EAF1FB" color="#1F3A5F" penwidth=1.2]; edge [fontname="DejaVu Sans" fontsize=12 color="#1F3A5F"];
+ start [shape=circle label="start" fillcolor="#1F3A5F" fontcolor=white width=0.5];
+ A [label="App.main()\nread db.properties\nMySQL ok? else DEMO mode" fillcolor="#FFF4D6"];
+ M [label="MainFrame\nJMenuBar + filter + JTable + pager" fillcolor="#E3F6E8" penwidth=2.2];
+ D [label="RegistrationDialog\n(modal JDialog)" fillcolor="#DCEBFA"];
+ E [label="JFileChooser\n(Export CSV)" fillcolor="#DCEBFA"]; AB [label="About dialog\n(JOptionPane)" fillcolor="#DCEBFA"];
+ ER [label="Inline error\n(red message)" fillcolor="#FBE6E6"];
+ start -> A -> M;
+ M -> D [label="File > Register (Ctrl+N)\nor button"]; D -> M [label="saved -> reload page 1"];
+ D -> ER [label="invalid / duplicate"]; ER -> D [label="correct and retry"];
+ M -> E [label="File > Export (Ctrl+E)"]; E -> M [label="CSV written"]; M -> AB [label="Help > About"]; AB -> M;
+ M -> M [label="filter / Prev / Next / F5\n(SwingWorker reload)"];
+ M -> end [label="File > Exit"]; end [shape=doublecircle label="end" width=0.4];
+}

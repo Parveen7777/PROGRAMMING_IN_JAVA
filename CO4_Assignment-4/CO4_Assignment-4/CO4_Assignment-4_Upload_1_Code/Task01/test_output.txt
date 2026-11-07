@@ -1,0 +1,12 @@
+PASS  empty register number rejected
+PASS  short register number rejected
+PASS  non-numeric amount rejected
+PASS  negative amount rejected
+PASS  3 decimal places rejected
+PASS  huge amount rejected
+PASS  valid input accepted
+PASS  payment succeeds
+PASS  row stored once
+PASS  SQL-injection text rejected, nothing stored
+PASS  declined payment not stored
+ALL TESTS PASSED

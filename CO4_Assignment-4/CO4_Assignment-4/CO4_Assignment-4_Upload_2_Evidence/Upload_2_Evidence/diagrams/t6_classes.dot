@@ -1,0 +1,13 @@
+digraph { rankdir=TB; nodesep=0.25; ranksep=0.45; graph [fontname="DejaVu Sans" dpi=170 pad=0.2 bgcolor=white]; node [fontname="DejaVu Sans" fontsize=15 shape=box style="rounded,filled" fillcolor="#EAF1FB" color="#1F3A5F" penwidth=1.2]; edge [fontname="DejaVu Sans" fontsize=12 color="#1F3A5F"]; compound=true;
+ subgraph cluster_ui { label="UI layer  (Swing — no SQL)"; style="rounded,filled"; fillcolor="#FFF9E8"; color="#C9A227";
+  MF [label="{MainFrame (JFrame)\l|JMenuBar, JComboBox filter, JTable, pager\l|loadPage()  exportCsv()  openRegisterDialog()\l}" shape=record fillcolor="#FFF4D6"];
+  RD [label="{RegistrationDialog (JDialog)\l|JTextField x3, JComboBox\l|submit()\l}" shape=record fillcolor="#FFF4D6"]; }
+ subgraph cluster_sv { label="Service layer  (rules — no Swing, no SQL)"; style="rounded,filled"; fillcolor="#EEF9F1"; color="#2E8B57";
+  SV [label="{RegistrationService\l|PAGE_SIZE = 20\l|validate()  register()  page()  total()  exportCsv()\l}" shape=record fillcolor="#E3F6E8"]; }
+ subgraph cluster_da { label="Data-access layer  (JDBC)"; style="rounded,filled"; fillcolor="#EEF3FB"; color="#1F3A5F";
+  DI [label="{«interface»\nRegistrationDao\l|eventNames()  add()  count()\lpage(event, offset, limit)  all()\l}" shape=record];
+  JD [label="JdbcRegistration\nDao (JDBC)"]; ID [label="InMemory\nRegistrationDao"];
+ }
+ MO [label="Registration (record)" fillcolor="#F3E8FA"]; DB [label="MySQL\nUNIQUE(student_reg,\nevent_id)" shape=cylinder fillcolor="#FDE9C9"];
+ MF -> SV; RD -> SV; SV -> DI; JD -> DI [arrowhead=empty style=dashed]; ID -> DI [arrowhead=empty style=dashed]; JD -> DB; DI -> MO [style=dotted]; MF -> RD [label="opens"];
+}

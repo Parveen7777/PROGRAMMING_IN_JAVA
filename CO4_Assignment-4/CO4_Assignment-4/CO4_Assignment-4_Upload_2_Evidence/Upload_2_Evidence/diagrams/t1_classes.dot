@@ -1,0 +1,9 @@
+digraph { rankdir=TB; graph [fontname="DejaVu Sans" dpi=170 pad=0.2 bgcolor=white]; node [fontname="DejaVu Sans" fontsize=15 shape=box style="rounded,filled" fillcolor="#EAF1FB" color="#1F3A5F" penwidth=1.2]; edge [fontname="DejaVu Sans" fontsize=12 color="#1F3A5F"];
+ W [label="{FeeWindow (JFrame)\l|VIEW + CONTROLLER\lregNo, amount, status\lpayAction / clearAction / receiptAction\l|startPayment()\lshow()\l}" shape=record fillcolor="#FFF4D6"];
+ S [label="{FeeService\l|LOGIC\l|validate(reg, amt) : String\lpay(reg, amt) : PaymentResult\l}" shape=record fillcolor="#E3F6E8"];
+ R [label="{«interface»\nFeeRepository\l|save(reg, amount)\l}" shape=record];
+ J [label="JdbcFeeRepository\n(PreparedStatement)" ]; M [label="InMemoryFeeRepository\n(tests / demo)"];
+ B [label="{«interface»\nBankGateway\l|confirm(reg, amount)\l}" shape=record];
+ P [label="PaymentResult\n(record)" fillcolor="#F3E8FA"];
+ W -> S [label="validate() on EDT\npay() in SwingWorker"]; S -> R [label="uses"]; S -> B [label="uses"]; J -> R [arrowhead=empty style=dashed]; M -> R [arrowhead=empty style=dashed]; S -> P [label="returns"]; P -> W [label="displayed by" style=dotted];
+}

@@ -1,0 +1,6 @@
+n clicks   redraw points (us/repaint) copy image (us/repaint)    points memory (KB)     image memory (KB) 
+10         12.9                       63.9                       0                      468               
+100        87.9                       75.3                       2                      468               
+1000       953.8                      187.5                      23                     468               
+10000      9433.7                     250.6                      234                    468               
+100000     99183.0                    188.8                      2343                   468               

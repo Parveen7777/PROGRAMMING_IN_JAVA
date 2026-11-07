@@ -1,0 +1,4 @@
+Task04/compile_error_demo/DrawPadTypo.java:8: error: method does not override or implement a method from a supertype
+            @Override public void mouseclicked(MouseEvent e) { }   // misspelt on purpose
+            ^
+1 error

@@ -1,0 +1,15 @@
+digraph { rankdir=TB; nodesep=0.25; ranksep=0.45; graph [fontname="DejaVu Sans" dpi=170 pad=0.2 bgcolor=white]; node [fontname="DejaVu Sans" fontsize=15 shape=box style="rounded,filled" fillcolor="#EAF1FB" color="#1F3A5F" penwidth=1.2]; edge [fontname="DejaVu Sans" fontsize=12 color="#1F3A5F"];
+ F [label="Frame  —  BorderLayout" fillcolor="#FFF4D6"];
+ NP [label="north Panel\nBorderLayout\n(NORTH)" fillcolor="#E3F6E8"];
+ R [label="java.awt.List results\n(CENTER – grows)" fillcolor="#FDE9C9" penwidth=2.5];
+ SP [label="south Panel\nBorderLayout\n(SOUTH)" fillcolor="#E3F6E8"];
+ F -> NP; F -> R; F -> SP;
+ TT [label="Label  title\n(NORTH)"]; SR [label="searchRow Panel\nFlowLayout(LEFT)\n(CENTER)" fillcolor="#DCEBFA"];
+ NP -> TT; NP -> SR;
+ s1 [label="Label"]; s2 [label="TextField"]; s3 [label="Choice\ncategory"]; s4 [label="Button\nSearch"];
+ SR -> s1; SR -> s2; SR -> s3; SR -> s4;
+ BR [label="buttonRow Panel\nFlowLayout(CENTER)\n(CENTER)" fillcolor="#DCEBFA"]; ST [label="Label status\n(SOUTH)"];
+ SP -> BR; SP -> ST;
+ b1 [label="Button Prev"]; b2 [label="Button Next"]; b3 [label="Button Reserve"];
+ BR -> b1; BR -> b2; BR -> b3;
+}

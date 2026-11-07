@@ -1,0 +1,4 @@
+A_Frame changed-lines=7 (added 4, removed 3)
+B_Inner changed-lines=10 (added 6, removed 4)
+C_Anonymous changed-lines=12 (added 7, removed 5)
+D_Lambda changed-lines=7 (added 4, removed 3)

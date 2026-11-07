@@ -1,0 +1,5 @@
+k        if-else chain (ns/op)  listener map (ns/op)  
+3        6.7                    1.4                   
+30       55.3                   1.4                   
+300      543.2                  2.0                   
+3000     5226.3                 2.0                   

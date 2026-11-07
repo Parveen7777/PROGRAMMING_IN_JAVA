@@ -1,0 +1,7 @@
+[event] windowOpened
+[event] windowActivated
+[event] itemStateChanged(department = Orthopaedics)
+[event] actionPerformed(Book Appointment)
+[event] windowClosing
+[event] windowDeactivated
+[event] windowClosed

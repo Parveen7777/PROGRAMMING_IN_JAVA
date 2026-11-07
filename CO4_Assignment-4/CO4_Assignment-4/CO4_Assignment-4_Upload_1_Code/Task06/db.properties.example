@@ -1,0 +1,4 @@
+# Copy to db.properties (same folder you run the app from) and edit.
+url=jdbc:mysql://localhost:3306/campus_events?useSSL=false&serverTimezone=UTC
+user=root
+password=your_password
